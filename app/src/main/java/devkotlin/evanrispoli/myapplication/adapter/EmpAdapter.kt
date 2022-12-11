@@ -1,10 +1,12 @@
-package devkotlin.evanrispoli.myapplication
+package devkotlin.evanrispoli.myapplication.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import devkotlin.evanrispoli.myapplication.R
+import devkotlin.evanrispoli.myapplication.models.EmployeeModel
 
 class EmpAdapter(private val empList: ArrayList<EmployeeModel>) :
     RecyclerView.Adapter<EmpAdapter.ViewHolder>() {
@@ -32,7 +34,7 @@ class EmpAdapter(private val empList: ArrayList<EmployeeModel>) :
     override fun getItemCount(): Int {
         return empList.size
     }
-//TODO
+
     class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
         val tvEmpName : TextView = itemView.findViewById(R.id.tvEmpName)

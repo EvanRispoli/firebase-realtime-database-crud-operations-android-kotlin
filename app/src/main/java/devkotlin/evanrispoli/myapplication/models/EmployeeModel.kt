@@ -1,4 +1,4 @@
-package devkotlin.evanrispoli.myapplication
+package devkotlin.evanrispoli.myapplication.models
 
 class EmployeeModel(
     var empId: String? = null,

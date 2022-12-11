@@ -1,4 +1,4 @@
-package devkotlin.evanrispoli.myapplication
+package devkotlin.evanrispoli.myapplication.activities
 
 import android.os.Bundle
 import android.widget.Button
@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import devkotlin.evanrispoli.myapplication.models.EmployeeModel
+import devkotlin.evanrispoli.myapplication.R
 
 class InsertionActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package devkotlin.evanrispoli.myapplication
+package devkotlin.evanrispoli.myapplication.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
+import devkotlin.evanrispoli.myapplication.adapter.EmpAdapter
+import devkotlin.evanrispoli.myapplication.models.EmployeeModel
+import devkotlin.evanrispoli.myapplication.R
 
 class FetchingActivity : AppCompatActivity() {
 
@@ -49,7 +52,7 @@ class FetchingActivity : AppCompatActivity() {
                     val mAdapter = EmpAdapter(empList)
                     empRecyclerView.adapter = mAdapter
 
-                    mAdapter.setOnItemClickListener(object : EmpAdapter.onItemClickListener{
+                    mAdapter.setOnItemClickListener(object : EmpAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
                             val intent = Intent(this@FetchingActivity, UserDetailsActivity::class.java)
 //put extras
